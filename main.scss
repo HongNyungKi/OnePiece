@@ -15,11 +15,10 @@ body {
             position: fixed;
             top: 0;
 
-
             header {
                 display: flex;
                 width: 1400px;
-                height: 70px;
+                height: 100px;
                 justify-content: space-between;
 
                 .main-menu ul {
@@ -72,7 +71,7 @@ body {
         }
 
         .section-slider {
-            margin-top: 70px;
+            margin-top: 100px;
 
             .slideShow {
                 width: 100%;
@@ -155,7 +154,11 @@ body {
         .section-movie {
             width: 1400px;
 
-            h1 {}
+            h1 {
+                font-size: 40px;
+                text-align: center;
+                margin: 30px 0;
+            }
 
             .movie_container {
                 display: flex;
@@ -164,25 +167,115 @@ body {
                 border: 1px solid black;
 
                 .column1 {
-                    width: 50%;
+                    width: 100%;
 
-                    img {
+                    position: relative;
+
+                    .image-wrap {
+                        position: absolute;
+                        top: 40%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
                         width: 60%;
-                        display: block;
-                        margin: 30px auto;
+                        height: auto;
+                        transition: 0.3s;
+
+                        &:hover {
+                            width: 65%;
+                        }
+
+                        img {
+                            width: 100%;
+                        }
                     }
+
+                    .movie-desc {
+                        position: absolute;
+                        bottom: 10%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 100%;
+                        text-align: center;
+                        font-size: 22px;
+                    }
+
                 }
 
                 .column2 {
-                    width: 50%;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
 
                     .past-movie {
                         display: flex;
+                        width: 100%;
+                        height: 100%;
 
-                        img {
+                        li {
+                            position: relative;
+                            width: 100%;
+
+                            .image-wrap {
+                                position: absolute;
+                                top: 45%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                width: 60%;
+                                height: auto;
+                                transition: 0.3s;
+
+                                img {
+                                    width: 100%;
+                                }
+
+                                &:hover {
+                                    width: 64%;
+                                }
+                            }
+
+                            .movie-desc {
+                                position: absolute;
+                                bottom: 5%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                width: 100%;
+                                text-align: center;
+
+                            }
+                        }
+                    }
+
+                    .more {
+                        width: 100%;
+                        height: 100%;
+                        position: relative;
+
+                        .image-wrap {
+                            position: absolute;
+                            top: 40%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
                             width: 60%;
-                            display: block;
-                            margin: 30px auto;
+                            height: auto;
+                            transition: 0.3s;
+
+                            &:hover {
+                                width: 65%;
+                            }
+
+                            img {
+                                width: 100%;
+                            }
+                        }
+
+                        p {
+                            position: absolute;
+                            bottom: 10%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            width: 100%;
+                            text-align: center;
+                            font-size: 22px;
                         }
                     }
 
