@@ -1,0 +1,125 @@
+body {
+  background: #ffffff; }
+  body a {
+    text-decoration: none;
+    color: black; }
+  body .web-inner {
+    max-width: 1400px;
+    margin: 0 auto; }
+    body .web-inner .section-header {
+      position: fixed;
+      top: 0; }
+      body .web-inner .section-header header {
+        display: flex;
+        width: 1400px;
+        height: 70px;
+        justify-content: space-between; }
+        body .web-inner .section-header header .main-menu ul {
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-transform: uppercase;
+          font-family: 'Metal Mania', cursive;
+          font-size: 20px;
+          letter-spacing: 2px; }
+          body .web-inner .section-header header .main-menu ul li {
+            margin: 0 10px; }
+            body .web-inner .section-header header .main-menu ul li a {
+              padding: 10px 10px; }
+        body .web-inner .section-header header .logo {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          height: inherit; }
+        body .web-inner .section-header header .user-menu ul {
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-transform: uppercase;
+          font-family: 'Nanum Gothic Coding', monospace;
+          font-size: 13px; }
+          body .web-inner .section-header header .user-menu ul li:last-child {
+            margin-right: 10px; }
+          body .web-inner .section-header header .user-menu ul li a {
+            padding: 10px 5px; }
+    body .web-inner .section-slider {
+      margin-top: 70px; }
+      body .web-inner .section-slider .slideShow {
+        width: 100%;
+        height: 700px;
+        overflow: hidden;
+        position: relative; }
+        body .web-inner .section-slider .slideShow .slideShow_slides {
+          position: absolute;
+          width: 100%;
+          height: 100%; }
+          body .web-inner .section-slider .slideShow .slideShow_slides a {
+            position: absolute;
+            width: inherit;
+            height: inherit;
+            cursor: crosshair; }
+        body .web-inner .section-slider .slideShow .slideShow_nav i {
+          font-size: 50px;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          color: white;
+          background: gray;
+          width: 50px;
+          height: 50px;
+          text-align: center;
+          border-radius: 8px; }
+          body .web-inner .section-slider .slideShow .slideShow_nav i:first-child {
+            margin-left: -600px; }
+          body .web-inner .section-slider .slideShow .slideShow_nav i:last-child {
+            margin-left: 600px; }
+          body .web-inner .section-slider .slideShow .slideShow_nav i:hover {
+            color: black;
+            cursor: pointer; }
+          body .web-inner .section-slider .slideShow .slideShow_nav i.disabled {
+            display: none; }
+        body .web-inner .section-slider .slideShow .indicator {
+          position: absolute;
+          bottom: 20px;
+          left: 0;
+          right: 0;
+          display: flex;
+          justify-content: center; }
+          body .web-inner .section-slider .slideShow .indicator a {
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            margin: 0 5px;
+            background: white;
+            opacity: 0.8;
+            text-indent: -9999px; }
+            body .web-inner .section-slider .slideShow .indicator a.active {
+              background: black; }
+    body .web-inner .section-movie {
+      width: 1400px; }
+      body .web-inner .section-movie .movie_container {
+        display: flex;
+        width: 100%;
+        height: 900px;
+        border: 1px solid black; }
+        body .web-inner .section-movie .movie_container .column1 {
+          width: 50%; }
+          body .web-inner .section-movie .movie_container .column1 img {
+            width: 60%;
+            display: block;
+            margin: 30px auto; }
+        body .web-inner .section-movie .movie_container .column2 {
+          width: 50%; }
+          body .web-inner .section-movie .movie_container .column2 .past-movie {
+            display: flex; }
+            body .web-inner .section-movie .movie_container .column2 .past-movie img {
+              width: 60%;
+              display: block;
+              margin: 30px auto; }
+
+
+/*# sourceMappingURL=/main.39afc03c.css.map */
