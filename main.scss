@@ -10,10 +10,12 @@ body {
         max-width: 1400px;
         margin: 0 auto;
 
-
         .section-header {
             position: fixed;
             top: 0;
+            z-index: 99;
+            transition: all 0.25s;
+            background: white;
 
             header {
                 display: flex;
@@ -68,6 +70,77 @@ body {
                     }
                 }
             }
+        }
+
+        .section-header.unvisible {
+            opacity: 0;
+        }
+
+        .section-header-clone {
+            position: fixed;
+            top: -100px;
+            z-index: 99;
+            background: gray;
+            transition: top 0.3s;
+            box-shadow: -2px -2px 10px silver;
+
+            header {
+                display: flex;
+                width: 1400px;
+                height: 65px;
+                justify-content: space-between;
+
+                .main-menu ul {
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-transform: uppercase;
+                    font-family: 'Metal Mania', cursive;
+                    font-size: 20px;
+                    letter-spacing: 2px;
+
+                    li {
+                        margin: 0 10px;
+
+                        a {
+                            padding: 10px 10px;
+                        }
+                    }
+                }
+
+                .logo {
+                    position: absolute;
+                    top: 55%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    height: inherit;
+                }
+
+                .user-menu ul {
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-transform: uppercase;
+                    font-family: 'Nanum Gothic Coding', monospace;
+                    font-size: 13px;
+
+                    li {
+                        &:last-child {
+                            margin-right: 10px;
+                        }
+
+                        a {
+                            padding: 10px 5px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .section-header-clone.visible {
+            top: 0;
         }
 
         .section-slider {

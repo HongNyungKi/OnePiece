@@ -8,7 +8,10 @@ body {
     margin: 0 auto; }
     body .web-inner .section-header {
       position: fixed;
-      top: 0; }
+      top: 0;
+      z-index: 99;
+      transition: all 0.25s;
+      background: white; }
       body .web-inner .section-header header {
         display: flex;
         width: 1400px;
@@ -45,6 +48,53 @@ body {
             margin-right: 10px; }
           body .web-inner .section-header header .user-menu ul li a {
             padding: 10px 5px; }
+    body .web-inner .section-header.unvisible {
+      opacity: 0; }
+    body .web-inner .section-header-clone {
+      position: fixed;
+      top: -100px;
+      z-index: 99;
+      background: gray;
+      transition: top 0.3s;
+      box-shadow: -2px -2px 10px silver; }
+      body .web-inner .section-header-clone header {
+        display: flex;
+        width: 1400px;
+        height: 65px;
+        justify-content: space-between; }
+        body .web-inner .section-header-clone header .main-menu ul {
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-transform: uppercase;
+          font-family: 'Metal Mania', cursive;
+          font-size: 20px;
+          letter-spacing: 2px; }
+          body .web-inner .section-header-clone header .main-menu ul li {
+            margin: 0 10px; }
+            body .web-inner .section-header-clone header .main-menu ul li a {
+              padding: 10px 10px; }
+        body .web-inner .section-header-clone header .logo {
+          position: absolute;
+          top: 55%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          height: inherit; }
+        body .web-inner .section-header-clone header .user-menu ul {
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-transform: uppercase;
+          font-family: 'Nanum Gothic Coding', monospace;
+          font-size: 13px; }
+          body .web-inner .section-header-clone header .user-menu ul li:last-child {
+            margin-right: 10px; }
+          body .web-inner .section-header-clone header .user-menu ul li a {
+            padding: 10px 5px; }
+    body .web-inner .section-header-clone.visible {
+      top: 0; }
     body .web-inner .section-slider {
       margin-top: 100px; }
       body .web-inner .section-slider .slideShow {

@@ -120,22 +120,21 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 })({"main.js":[function(require,module,exports) {
 $(function () {
   //---------SECTION-HEADER-----------
-  // $window = $(window),
-  //     $header = $("header"),
-  //     $headerClone = $header.contents().clone(),
-  //     $headerCloneContainer = $('<header class="header-clone"><header>'),
-  //     $threshold = $header.offset().top + $header.outerHeight();
-  // $headerCloneContainer.append($headerClone);
-  // $headerCloneContainer.appendTo("body");
-  // $window.scroll(function () {
-  //     if ($(this).scrollTop() >= $threshold) {
-  //         $headerCloneContainer.addClass("visible");
-  //     } else {
-  //         $headerCloneContainer.removeClass("visible");
-  //     }
-  // });
-  //---------------------------
+  $window = $(window), $sectionHeader = $(".section-header"), $headerClone = $sectionHeader.contents().clone(), $headerCloneContainer = $('<section class="section-header-clone"><section>'), $threshold = $sectionHeader.offset().top + $sectionHeader.outerHeight();
+  $headerClone.find("img").attr("src", "https://pngimage.net/wp-content/uploads/2018/06/luffy-hat-png-1.png");
+  $headerCloneContainer.append($headerClone);
+  $headerCloneContainer.appendTo(".web-inner");
+  $window.scroll(function () {
+    if ($(this).scrollTop() >= $threshold) {
+      $headerCloneContainer.addClass("visible");
+      $sectionHeader.addClass("unvisible");
+    } else {
+      $headerCloneContainer.removeClass("visible");
+      $sectionHeader.removeClass("unvisible");
+    }
+  }); //---------------------------
   //-------------SECTION-SLIDER-----------
+
   var container = $(".slideShow"),
       slideGroup = container.find(".slideShow_slides"),
       slides = slideGroup.find('a'),
@@ -249,7 +248,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53501" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50275" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

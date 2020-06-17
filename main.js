@@ -1,21 +1,24 @@
 $(function () {
     //---------SECTION-HEADER-----------
-    // $window = $(window),
-    //     $header = $("header"),
-    //     $headerClone = $header.contents().clone(),
-    //     $headerCloneContainer = $('<header class="header-clone"><header>'),
-    //     $threshold = $header.offset().top + $header.outerHeight();
+    $window = $(window),
+        $sectionHeader = $(".section-header"),
+        $headerClone = $sectionHeader.contents().clone(),
+        $headerCloneContainer = $('<section class="section-header-clone"><section>'),
+        $threshold = $sectionHeader.offset().top + $sectionHeader.outerHeight();
 
-    // $headerCloneContainer.append($headerClone);
-    // $headerCloneContainer.appendTo("body");
+    $headerClone.find("img").attr("src", "https://pngimage.net/wp-content/uploads/2018/06/luffy-hat-png-1.png");
+    $headerCloneContainer.append($headerClone);
+    $headerCloneContainer.appendTo(".web-inner");
 
-    // $window.scroll(function () {
-    //     if ($(this).scrollTop() >= $threshold) {
-    //         $headerCloneContainer.addClass("visible");
-    //     } else {
-    //         $headerCloneContainer.removeClass("visible");
-    //     }
-    // });
+    $window.scroll(function () {
+        if ($(this).scrollTop() >= $threshold) {
+            $headerCloneContainer.addClass("visible");
+            $sectionHeader.addClass("unvisible");
+        } else {
+            $headerCloneContainer.removeClass("visible");
+            $sectionHeader.removeClass("unvisible");
+        }
+    });
     //---------------------------
 
     //-------------SECTION-SLIDER-----------
