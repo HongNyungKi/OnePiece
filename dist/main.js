@@ -117,141 +117,74 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"main.js":[function(require,module,exports) {
-$(function () {
-  //---------SECTION-HEADER-----------
-  $window = $(window), $sectionHeader = $(".section-header"), $headerClone = $sectionHeader.contents().clone(), $headerCloneContainer = $('<section class="section-header-clone"><section>'), $threshold = $sectionHeader.offset().top + $sectionHeader.outerHeight();
-  $headerClone.find("img").attr("src", "https://pngimage.net/wp-content/uploads/2018/06/luffy-hat-png-1.png");
-  $headerCloneContainer.append($headerClone);
-  $headerCloneContainer.appendTo(".web-inner");
-  $window.scroll(function () {
-    if ($(this).scrollTop() >= $threshold) {
-      $headerCloneContainer.addClass("visible");
-      $sectionHeader.addClass("unvisible");
-    } else {
-      $headerCloneContainer.removeClass("visible");
-      $sectionHeader.removeClass("unvisible");
-    }
-  }); //---------------------------
-  //-------------SECTION-SLIDER-----------
+})({"node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+var bundleURL = null;
 
-  var container = $(".slideShow"),
-      slideGroup = container.find(".slideShow_slides"),
-      slides = slideGroup.find('a'),
-      nav = container.find(".slideShow_nav"),
-      indicator = container.find(".indicator"),
-      slidesCount = slides.length,
-      indicatorHtml = "",
-      currentIndex = 0.,
-      duration = 500,
-      easing = "easeInOutExpo",
-      interval = 3500,
-      timer;
-  slides.each(function (i) {
-    var newLeft = i * 100 + "%";
-    $(this).css({
-      left: newLeft
-    });
-    indicatorHtml += '<a href="">' + (i + 1) + '</a>';
-  });
-  indicator.html(indicatorHtml);
-
-  function goToSlide(index) {
-    slideGroup.animate({
-      left: -100 * index + "%"
-    }, duration);
-    currentIndex = index;
-    upDateNav();
+function getBundleURLCached() {
+  if (!bundleURL) {
+    bundleURL = getBundleURL();
   }
 
-  function upDateNav() {
-    var navPrev = nav.find(".prev");
-    var navNext = nav.find(".next");
+  return bundleURL;
+}
 
-    if (currentIndex == 0) {
-      navPrev.addClass("disabled");
-    } else {
-      navPrev.removeClass("disabled");
+function getBundleURL() {
+  // Attempt to find the URL of the current script and use that as the base URL
+  try {
+    throw new Error();
+  } catch (err) {
+    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
+
+    if (matches) {
+      return getBaseURL(matches[0]);
     }
-
-    if (currentIndex == slidesCount - 1) {
-      navNext.addClass("disabled");
-    } else {
-      navNext.removeClass("disabled");
-    }
-
-    indicator.find("a").eq(currentIndex).addClass("active").siblings().removeClass("active");
-  } //indicator로 이동하기
-
-
-  indicator.find("a").click(function (e) {
-    e.preventDefault();
-    var idx = $(this).index();
-    goToSlide(idx);
-  }); //nav로 이동하기
-
-  nav.find("i").click(function (e) {
-    e.preventDefault();
-
-    if ($(this).hasClass("prev")) {
-      goToSlide(currentIndex - 1);
-    } else {
-      goToSlide(currentIndex + 1);
-    }
-  }); //자동 슬라이드 함수
-
-  function startTimer() {
-    timer = setInterval(function () {
-      var nextIndex = (currentIndex + 1) % slidesCount;
-      goToSlide(nextIndex);
-    }, interval);
   }
 
-  function stopTimer() {
-    clearInterval(timer);
+  return '/';
+}
+
+function getBaseURL(url) {
+  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
+}
+
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+},{}],"node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+var bundle = require('./bundle-url');
+
+function updateLink(link) {
+  var newLink = link.cloneNode();
+
+  newLink.onload = function () {
+    link.remove();
+  };
+
+  newLink.href = link.href.split('?')[0] + '?' + Date.now();
+  link.parentNode.insertBefore(newLink, link.nextSibling);
+}
+
+var cssTimeout = null;
+
+function reloadCSS() {
+  if (cssTimeout) {
+    return;
   }
 
-  container.mouseenter(function () {
-    stopTimer();
-  });
-  container.mouseleave(function () {
-    startTimer();
-  });
-  upDateNav();
-  startTimer(); //---------------------------------------
-  //-----------------SECTION MOVIE---------
+  cssTimeout = setTimeout(function () {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
 
-  var $recnetMovieBg = $(".column1"),
-      $pastMovieBg = $(".past-movie"),
-      $moreMovieBg = $(".more"),
-      $recentImg = $recnetMovieBg.find("img"),
-      $pastBg1 = $pastMovieBg.children(":eq(0)"),
-      $pastBg2 = $pastMovieBg.children(":eq(1)"),
-      $pastImg1 = $pastBg1.find("img"),
-      $pastImg2 = $pastBg2.find("img"),
-      $moreImg = $recentImg.find(".image-wrap");
-  $recentImg.mouseenter(function () {
-    $recnetMovieBg.css({
-      background: "#1F64A9"
-    });
-  });
-  $recentImg.mouseleave(function () {
-    $recnetMovieBg.css({
-      background: "#F6F6F6"
-    });
-  });
-  $pastImg1.mouseenter(function () {
-    $pastBg1.css({
-      background: "#1F64A9"
-    });
-  });
-  $pastImg1.mouseleave(function () {
-    $pastBg1.css({
-      background: "#F6F6F6"
-    });
-  }); //--------------------------------------
-});
-},{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+    for (var i = 0; i < links.length; i++) {
+      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
+        updateLink(links[i]);
+      }
+    }
+
+    cssTimeout = null;
+  }, 50);
+}
+
+module.exports = reloadCSS;
+},{"./bundle-url":"node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -455,5 +388,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js","main.js"], null)
-//# sourceMappingURL=/main.1f19ae8e.js.map
+},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
+//# sourceMappingURL=/main.js.map

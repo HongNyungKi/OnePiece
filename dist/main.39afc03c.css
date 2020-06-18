@@ -15,12 +15,15 @@ body {
       top: 0;
       z-index: 99;
       transition: all 0.25s;
-      background: white; }
+      background: white;
+      width: 1400px;
+      height: 100px; }
       body .web-inner .section-header header {
         display: flex;
-        width: 1400px;
-        height: 100px;
-        justify-content: space-between; }
+        width: inherit;
+        height: inherit;
+        justify-content: space-between;
+        position: relative; }
         body .web-inner .section-header header .main-menu ul {
           height: 100%;
           display: flex;

@@ -23,12 +23,17 @@ body {
             z-index: 99;
             transition: all 0.25s;
             background: white;
+            width: 1400px;
+            height: 100px;
+
 
             header {
                 display: flex;
-                width: 1400px;
-                height: 100px;
+                width: inherit;
+                height: inherit;
                 justify-content: space-between;
+                position: relative;
+
 
                 .main-menu ul {
                     height: 100%;
