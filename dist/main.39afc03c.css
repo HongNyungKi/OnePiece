@@ -1,10 +1,14 @@
+* {
+  box-sizing: border-box; }
+
 body {
   background: #ffffff; }
   body a {
     text-decoration: none;
     color: black; }
   body .web-inner {
-    max-width: 1400px;
+    width: 1400px;
+    height: 100%;
     margin: 0 auto; }
     body .web-inner .section-header {
       position: fixed;
@@ -60,7 +64,7 @@ body {
       body .web-inner .section-header-clone header {
         display: flex;
         width: 1400px;
-        height: 65px;
+        height: 55px;
         justify-content: space-between; }
         body .web-inner .section-header-clone header .main-menu ul {
           height: 100%;
@@ -96,12 +100,14 @@ body {
     body .web-inner .section-header-clone.visible {
       top: 0; }
     body .web-inner .section-slider {
+      height: 100vh;
       margin-top: 100px; }
       body .web-inner .section-slider .slideShow {
         width: 100%;
         height: 700px;
         overflow: hidden;
-        position: relative; }
+        position: relative;
+        box-shadow: 2px 2px 5px #999; }
         body .web-inner .section-slider .slideShow .slideShow_slides {
           position: absolute;
           width: 100%;
@@ -149,33 +155,91 @@ body {
             text-indent: -9999px; }
             body .web-inner .section-slider .slideShow .indicator a.active {
               background: black; }
-    body .web-inner .section-movie {
-      width: 1400px; }
-      body .web-inner .section-movie h1 {
-        font-size: 40px;
-        text-align: center;
-        margin: 30px 0; }
-      body .web-inner .section-movie .movie_container {
-        display: flex;
+    body .web-inner .section-movie h1 {
+      font-size: 40px;
+      text-align: center;
+      margin: 30px 0; }
+    body .web-inner .section-movie .movie_container {
+      display: flex;
+      width: 100%;
+      height: 900px; }
+      body .web-inner .section-movie .movie_container .column1 {
         width: 100%;
-        height: 900px;
-        border: 1px solid black; }
-        body .web-inner .section-movie .movie_container .column1 {
+        position: relative;
+        background: #F6F6F6;
+        border-right: 5px solid white; }
+        body .web-inner .section-movie .movie_container .column1 .image-wrap {
+          position: absolute;
+          top: 40%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 60%;
+          height: auto;
+          transition: 0.3s; }
+          body .web-inner .section-movie .movie_container .column1 .image-wrap:hover {
+            width: 64%; }
+          body .web-inner .section-movie .movie_container .column1 .image-wrap img {
+            width: 100%; }
+        body .web-inner .section-movie .movie_container .column1 .movie-desc {
+          position: absolute;
+          bottom: 10%;
+          left: 50%;
+          transform: translate(-50%, -50%);
           width: 100%;
-          position: relative; }
-          body .web-inner .section-movie .movie_container .column1 .image-wrap {
+          text-align: center;
+          font-size: 22px; }
+      body .web-inner .section-movie .movie_container .column2 {
+        width: 100%;
+        display: flex;
+        flex-direction: column; }
+        body .web-inner .section-movie .movie_container .column2 .past-movie {
+          display: flex;
+          width: 100%;
+          height: 100%; }
+          body .web-inner .section-movie .movie_container .column2 .past-movie li {
+            position: relative;
+            width: 100%;
+            background: #F6F6F6; }
+            body .web-inner .section-movie .movie_container .column2 .past-movie li:first-child {
+              border-right: 5px solid white; }
+            body .web-inner .section-movie .movie_container .column2 .past-movie li .image-wrap {
+              position: absolute;
+              top: 45%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              width: 60%;
+              height: auto;
+              transition: 0.3s; }
+              body .web-inner .section-movie .movie_container .column2 .past-movie li .image-wrap img {
+                width: 100%; }
+              body .web-inner .section-movie .movie_container .column2 .past-movie li .image-wrap:hover {
+                width: 64%; }
+            body .web-inner .section-movie .movie_container .column2 .past-movie li .movie-desc {
+              position: absolute;
+              bottom: 5%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              width: 100%;
+              text-align: center; }
+        body .web-inner .section-movie .movie_container .column2 .more {
+          width: 100%;
+          height: 100%;
+          position: relative;
+          background: #F6F6F6;
+          border-top: 5px solid white; }
+          body .web-inner .section-movie .movie_container .column2 .more .image-wrap {
             position: absolute;
             top: 40%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 60%;
+            width: 50%;
             height: auto;
             transition: 0.3s; }
-            body .web-inner .section-movie .movie_container .column1 .image-wrap:hover {
-              width: 65%; }
-            body .web-inner .section-movie .movie_container .column1 .image-wrap img {
+            body .web-inner .section-movie .movie_container .column2 .more .image-wrap:hover {
+              width: 55%; }
+            body .web-inner .section-movie .movie_container .column2 .more .image-wrap img {
               width: 100%; }
-          body .web-inner .section-movie .movie_container .column1 .movie-desc {
+          body .web-inner .section-movie .movie_container .column2 .more p {
             position: absolute;
             bottom: 10%;
             left: 50%;
@@ -183,60 +247,6 @@ body {
             width: 100%;
             text-align: center;
             font-size: 22px; }
-        body .web-inner .section-movie .movie_container .column2 {
-          width: 100%;
-          display: flex;
-          flex-direction: column; }
-          body .web-inner .section-movie .movie_container .column2 .past-movie {
-            display: flex;
-            width: 100%;
-            height: 100%; }
-            body .web-inner .section-movie .movie_container .column2 .past-movie li {
-              position: relative;
-              width: 100%; }
-              body .web-inner .section-movie .movie_container .column2 .past-movie li .image-wrap {
-                position: absolute;
-                top: 45%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                width: 60%;
-                height: auto;
-                transition: 0.3s; }
-                body .web-inner .section-movie .movie_container .column2 .past-movie li .image-wrap img {
-                  width: 100%; }
-                body .web-inner .section-movie .movie_container .column2 .past-movie li .image-wrap:hover {
-                  width: 64%; }
-              body .web-inner .section-movie .movie_container .column2 .past-movie li .movie-desc {
-                position: absolute;
-                bottom: 5%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                width: 100%;
-                text-align: center; }
-          body .web-inner .section-movie .movie_container .column2 .more {
-            width: 100%;
-            height: 100%;
-            position: relative; }
-            body .web-inner .section-movie .movie_container .column2 .more .image-wrap {
-              position: absolute;
-              top: 40%;
-              left: 50%;
-              transform: translate(-50%, -50%);
-              width: 60%;
-              height: auto;
-              transition: 0.3s; }
-              body .web-inner .section-movie .movie_container .column2 .more .image-wrap:hover {
-                width: 65%; }
-              body .web-inner .section-movie .movie_container .column2 .more .image-wrap img {
-                width: 100%; }
-            body .web-inner .section-movie .movie_container .column2 .more p {
-              position: absolute;
-              bottom: 10%;
-              left: 50%;
-              transform: translate(-50%, -50%);
-              width: 100%;
-              text-align: center;
-              font-size: 22px; }
 
 
 /*# sourceMappingURL=/main.39afc03c.css.map */

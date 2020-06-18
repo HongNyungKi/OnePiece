@@ -114,5 +114,44 @@ $(function () {
     upDateNav();
     startTimer();
     //---------------------------------------
+    //-----------------SECTION MOVIE---------
+    var $recnetMovieBg = $(".column1"),
+        $pastMovieBg = $(".past-movie"),
+        $moreMovieBg = $(".more"),
+        $recentImg = $recnetMovieBg.find("img"),
+        $pastBg1 = $pastMovieBg.children(":eq(0)"),
+        $pastBg2 = $pastMovieBg.children(":eq(1)"),
+        $pastImg1 = $pastBg1.find("img"),
+        $pastImg2 = $pastBg2.find("img"),
+        $moreImg = $recentImg.find(".image-wrap");
+
+    $recentImg.mouseenter(function () {
+        $recnetMovieBg.css({
+            background: "#1F64A9"
+        });
+    });
+    $recentImg.mouseleave(function () {
+        $recnetMovieBg.css({
+            background: "#F6F6F6"
+        })
+    })
+    $pastImg1.mouseenter(function () {
+        $pastBg1.css({
+            background: "#1F64A9"
+        })
+    })
+    $pastImg1.mouseleave(function () {
+        $pastBg1.css({
+            background: "#F6F6F6"
+        })
+    })
+
+
+
+
+
+    //--------------------------------------
+
+
 
 });

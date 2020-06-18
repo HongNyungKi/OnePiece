@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     background: #ffffff;
 
@@ -6,8 +10,11 @@ body {
         color: black;
     }
 
+
+
     .web-inner {
-        max-width: 1400px;
+        width: 1400px;
+        height: 100%;
         margin: 0 auto;
 
         .section-header {
@@ -87,7 +94,7 @@ body {
             header {
                 display: flex;
                 width: 1400px;
-                height: 65px;
+                height: 55px;
                 justify-content: space-between;
 
                 .main-menu ul {
@@ -144,13 +151,16 @@ body {
         }
 
         .section-slider {
+            height: 100vh;
             margin-top: 100px;
+
 
             .slideShow {
                 width: 100%;
                 height: 700px;
                 overflow: hidden;
                 position: relative;
+                box-shadow: 2px 2px 5px #999;
 
                 .slideShow_slides {
                     position: absolute;
@@ -225,7 +235,8 @@ body {
         }
 
         .section-movie {
-            width: 1400px;
+            // width: 1400px;
+
 
             h1 {
                 font-size: 40px;
@@ -237,12 +248,13 @@ body {
                 display: flex;
                 width: 100%;
                 height: 900px;
-                border: 1px solid black;
+
 
                 .column1 {
                     width: 100%;
-
                     position: relative;
+                    background: #F6F6F6;
+                    border-right: 5px solid white;
 
                     .image-wrap {
                         position: absolute;
@@ -254,7 +266,7 @@ body {
                         transition: 0.3s;
 
                         &:hover {
-                            width: 65%;
+                            width: 64%;
                         }
 
                         img {
@@ -287,6 +299,12 @@ body {
                         li {
                             position: relative;
                             width: 100%;
+                            background: #F6F6F6;
+
+                            &:first-child {
+                                border-right: 5px solid white;
+                            }
+
 
                             .image-wrap {
                                 position: absolute;
@@ -322,18 +340,20 @@ body {
                         width: 100%;
                         height: 100%;
                         position: relative;
+                        background: #F6F6F6;
+                        border-top: 5px solid white;
 
                         .image-wrap {
                             position: absolute;
                             top: 40%;
                             left: 50%;
                             transform: translate(-50%, -50%);
-                            width: 60%;
+                            width: 50%;
                             height: auto;
                             transition: 0.3s;
 
                             &:hover {
-                                width: 65%;
+                                width: 55%;
                             }
 
                             img {

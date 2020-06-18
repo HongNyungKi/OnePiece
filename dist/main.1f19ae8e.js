@@ -219,6 +219,37 @@ $(function () {
   });
   upDateNav();
   startTimer(); //---------------------------------------
+  //-----------------SECTION MOVIE---------
+
+  var $recnetMovieBg = $(".column1"),
+      $pastMovieBg = $(".past-movie"),
+      $moreMovieBg = $(".more"),
+      $recentImg = $recnetMovieBg.find("img"),
+      $pastBg1 = $pastMovieBg.children(":eq(0)"),
+      $pastBg2 = $pastMovieBg.children(":eq(1)"),
+      $pastImg1 = $pastBg1.find("img"),
+      $pastImg2 = $pastBg2.find("img"),
+      $moreImg = $recentImg.find(".image-wrap");
+  $recentImg.mouseenter(function () {
+    $recnetMovieBg.css({
+      background: "#1F64A9"
+    });
+  });
+  $recentImg.mouseleave(function () {
+    $recnetMovieBg.css({
+      background: "#F6F6F6"
+    });
+  });
+  $pastImg1.mouseenter(function () {
+    $pastBg1.css({
+      background: "#1F64A9"
+    });
+  });
+  $pastImg1.mouseleave(function () {
+    $pastBg1.css({
+      background: "#F6F6F6"
+    });
+  }); //--------------------------------------
 });
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -248,7 +279,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50275" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52505" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
