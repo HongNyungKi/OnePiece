@@ -229,7 +229,7 @@ $(function () {
       $pastBg2 = $pastMovieBg.children(":eq(1)"),
       $pastImg1 = $pastBg1.find("img"),
       $pastImg2 = $pastBg2.find("img"),
-      $moreImg = $recentImg.find(".image-wrap");
+      $moreImg = $moreMovieBg.find(".image-wrap");
   $recentImg.mouseenter(function () {
     $recnetMovieBg.css({
       background: "#1F64A9"
@@ -249,6 +249,12 @@ $(function () {
     $pastBg1.css({
       background: "#F6F6F6"
     });
+  });
+  $pastImg2.hover(function () {
+    $pastBg2.toggleClass("active");
+  });
+  $moreImg.hover(function () {
+    $moreImg.toggleClass("active");
   }); //--------------------------------------
 });
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -279,7 +285,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52871" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50994" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
