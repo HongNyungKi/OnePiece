@@ -10,7 +10,7 @@ body {
     width: 1400px;
     height: 100%;
     margin: 0 auto; }
-    body .web-inner .section-header {
+    body .web-inner .header-container {
       position: fixed;
       top: 0;
       z-index: 99;
@@ -18,13 +18,13 @@ body {
       background: white;
       width: 1400px;
       height: 100px; }
-      body .web-inner .section-header header {
+      body .web-inner .header-container .menu-wrap {
         display: flex;
         width: inherit;
         height: inherit;
         justify-content: space-between;
         position: relative; }
-        body .web-inner .section-header header .main-menu ul {
+        body .web-inner .header-container .menu-wrap .main-menu ul {
           height: 100%;
           display: flex;
           justify-content: center;
@@ -33,17 +33,17 @@ body {
           font-family: 'Metal Mania', cursive;
           font-size: 20px;
           letter-spacing: 2px; }
-          body .web-inner .section-header header .main-menu ul li {
+          body .web-inner .header-container .menu-wrap .main-menu ul li {
             margin: 0 10px; }
-            body .web-inner .section-header header .main-menu ul li a {
+            body .web-inner .header-container .menu-wrap .main-menu ul li a {
               padding: 10px 10px; }
-        body .web-inner .section-header header .logo {
+        body .web-inner .header-container .menu-wrap .logo {
           position: absolute;
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
           height: inherit; }
-        body .web-inner .section-header header .user-menu ul {
+        body .web-inner .header-container .menu-wrap .user-menu ul {
           height: 100%;
           display: flex;
           justify-content: center;
@@ -51,25 +51,27 @@ body {
           text-transform: uppercase;
           font-family: 'Nanum Gothic Coding', monospace;
           font-size: 13px; }
-          body .web-inner .section-header header .user-menu ul li:last-child {
+          body .web-inner .header-container .menu-wrap .user-menu ul li:last-child {
             margin-right: 10px; }
-          body .web-inner .section-header header .user-menu ul li a {
+          body .web-inner .header-container .menu-wrap .user-menu ul li a {
             padding: 10px 5px; }
-    body .web-inner .section-header.unvisible {
+    body .web-inner .header-container.unvisible {
       opacity: 0; }
-    body .web-inner .section-header-clone {
+    body .web-inner .header-container-clone {
       position: fixed;
       top: -100px;
       z-index: 99;
+      transition: all 0.25s;
       background: gray;
-      transition: top 0.3s;
-      box-shadow: -2px -2px 10px silver; }
-      body .web-inner .section-header-clone header {
+      width: 1400px;
+      height: 60px; }
+      body .web-inner .header-container-clone .menu-wrap {
         display: flex;
-        width: 1400px;
-        height: 55px;
-        justify-content: space-between; }
-        body .web-inner .section-header-clone header .main-menu ul {
+        width: inherit;
+        height: inherit;
+        justify-content: space-between;
+        position: relative; }
+        body .web-inner .header-container-clone .menu-wrap .main-menu ul {
           height: 100%;
           display: flex;
           justify-content: center;
@@ -78,17 +80,17 @@ body {
           font-family: 'Metal Mania', cursive;
           font-size: 20px;
           letter-spacing: 2px; }
-          body .web-inner .section-header-clone header .main-menu ul li {
+          body .web-inner .header-container-clone .menu-wrap .main-menu ul li {
             margin: 0 10px; }
-            body .web-inner .section-header-clone header .main-menu ul li a {
+            body .web-inner .header-container-clone .menu-wrap .main-menu ul li a {
               padding: 10px 10px; }
-        body .web-inner .section-header-clone header .logo {
+        body .web-inner .header-container-clone .menu-wrap .logo {
           position: absolute;
-          top: 55%;
+          top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
           height: inherit; }
-        body .web-inner .section-header-clone header .user-menu ul {
+        body .web-inner .header-container-clone .menu-wrap .user-menu ul {
           height: 100%;
           display: flex;
           justify-content: center;
@@ -96,11 +98,11 @@ body {
           text-transform: uppercase;
           font-family: 'Nanum Gothic Coding', monospace;
           font-size: 13px; }
-          body .web-inner .section-header-clone header .user-menu ul li:last-child {
+          body .web-inner .header-container-clone .menu-wrap .user-menu ul li:last-child {
             margin-right: 10px; }
-          body .web-inner .section-header-clone header .user-menu ul li a {
+          body .web-inner .header-container-clone .menu-wrap .user-menu ul li a {
             padding: 10px 5px; }
-    body .web-inner .section-header-clone.visible {
+    body .web-inner .header-container-clone.visible {
       top: 0; }
     body .web-inner .section-slider {
       height: 100vh;
@@ -270,6 +272,18 @@ body {
               font-weight: bold; }
           body .web-inner .section-movie .movie_container .column2 .more:hover {
             background: #1F64A9; }
+    body .web-inner .section-animation {
+      height: 100vh; }
+      body .web-inner .section-animation h1 {
+        font-size: 40px;
+        text-align: center;
+        margin: 20px 0;
+        font-family: 'Metal Mania', cursive;
+        font-size: 100px;
+        letter-spacing: 5px; }
+      body .web-inner .section-animation .animation_container {
+        height: 80vh;
+        background: green; }
 
 
 /*# sourceMappingURL=/main.39afc03c.css.map */
