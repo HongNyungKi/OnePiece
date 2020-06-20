@@ -273,7 +273,8 @@ body {
           body .web-inner .section-movie .movie_container .column2 .more:hover {
             background: #1F64A9; }
     body .web-inner .section-animation {
-      height: 100vh; }
+      height: 100vh;
+      position: relative; }
       body .web-inner .section-animation h1 {
         font-size: 40px;
         text-align: center;
@@ -283,7 +284,116 @@ body {
         letter-spacing: 5px; }
       body .web-inner .section-animation .animation_container {
         height: 80vh;
-        background: green; }
+        background: green;
+        width: 900px;
+        height: 400px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        background: #fff;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        display: flex;
+        align-items: center; }
+        body .web-inner .section-animation .animation_container #left-side {
+          height: 70%;
+          width: 25%;
+          display: flex;
+          align-items: center;
+          justify-content: center; }
+          body .web-inner .section-animation .animation_container #left-side ul li {
+            padding: 15px 0;
+            line-height: 2;
+            cursor: pointer;
+            color: rgba(51, 51, 51, 0.5); }
+            body .web-inner .section-animation .animation_container #left-side ul li i {
+              font-size: 25px;
+              margin-right: 10px; }
+            body .web-inner .section-animation .animation_container #left-side ul li:hover {
+              color: #333333; }
+            body .web-inner .section-animation .animation_container #left-side ul li:hover > i {
+              color: #E74C3C; }
+          body .web-inner .section-animation .animation_container #left-side ul li.active {
+            color: #333333; }
+            body .web-inner .section-animation .animation_container #left-side ul li.active > i {
+              color: #E74C3C; }
+        body .web-inner .section-animation .animation_container #border {
+          width: 1px;
+          height: 75%;
+          background: rgba(51, 51, 51, 0.2); }
+          body .web-inner .section-animation .animation_container #border #line.one {
+            width: 5px;
+            height: 55px;
+            background-color: #E74C3C;
+            margin-left: -2px;
+            margin-top: 25px;
+            transition: all .4s ease-in-out; }
+          body .web-inner .section-animation .animation_container #border #line.two {
+            width: 5px;
+            height: 55px;
+            background-color: #E74C3C;
+            margin-left: -2px;
+            margin-top: 90px;
+            transition: all .4s ease-in-out; }
+          body .web-inner .section-animation .animation_container #border #line.three {
+            width: 5px;
+            height: 55px;
+            background-color: #E74C3C;
+            margin-left: -2px;
+            margin-top: 155px;
+            transition: all .4s ease-in-out; }
+          body .web-inner .section-animation .animation_container #border #line.four {
+            width: 5px;
+            height: 55px;
+            background-color: #E74C3C;
+            margin-left: -2px;
+            margin-top: 215px;
+            transition: all .4s ease-in-out; }
+        body .web-inner .section-animation .animation_container #right-side {
+          width: 75%;
+          height: 75%;
+          overflow: hidden; }
+          body .web-inner .section-animation .animation_container #right-side #shoppingCart,
+          body .web-inner .section-animation .animation_container #right-side #pay,
+          body .web-inner .section-animation .animation_container #right-side #like,
+          body .web-inner .section-animation .animation_container #right-side #question {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            margin-top: -300px;
+            opacity: 0;
+            transition: all .6s ease-in-out; }
+            body .web-inner .section-animation .animation_container #right-side #shoppingCart i,
+            body .web-inner .section-animation .animation_container #right-side #pay i,
+            body .web-inner .section-animation .animation_container #right-side #like i,
+            body .web-inner .section-animation .animation_container #right-side #question i {
+              font-size: 80px; }
+            body .web-inner .section-animation .animation_container #right-side #shoppingCart h1,
+            body .web-inner .section-animation .animation_container #right-side #pay h1,
+            body .web-inner .section-animation .animation_container #right-side #like h1,
+            body .web-inner .section-animation .animation_container #right-side #question h1 {
+              font-weight: 800;
+              font-size: 35px;
+              color: #333;
+              padding: 40px; }
+            body .web-inner .section-animation .animation_container #right-side #shoppingCart p,
+            body .web-inner .section-animation .animation_container #right-side #pay p,
+            body .web-inner .section-animation .animation_container #right-side #like p,
+            body .web-inner .section-animation .animation_container #right-side #question p {
+              color: #333;
+              padding: 0 30px;
+              line-height: 1.2; }
+          body .web-inner .section-animation .animation_container #right-side #shoppingCart.active,
+          body .web-inner .section-animation .animation_container #right-side #pay.active,
+          body .web-inner .section-animation .animation_container #right-side #like.active,
+          body .web-inner .section-animation .animation_container #right-side #question.active {
+            opacity: 1;
+            margin-top: 15px;
+            transition: all .6s ease-in-out; }
 
 
 /*# sourceMappingURL=/main.39afc03c.css.map */

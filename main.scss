@@ -413,6 +413,11 @@ body {
 
         .section-animation {
             height: 100vh;
+            $gray: #eee;
+            $white: #fff;
+            $black: #333;
+            $active: #E74C3C;
+            position: relative;
 
             h1 {
                 font-size: 40px;
@@ -426,7 +431,143 @@ body {
             .animation_container {
                 height: 80vh;
                 background: green;
+                width: 900px;
+                height: 400px;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+                background: $white;
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+                display: flex;
+                align-items: center;
+                #left-side {
+                    height: 70%;
+                    width: 25%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                
+                    ul {
+                        li {
+                            padding: 15px 0;
+                            line-height: 2;
+                            cursor: pointer;
+                            color: rgba($black, .5);
+                
+                            i {
+                                font-size: 25px;
+                                margin-right: 10px;
+                            }
+                
+                            &:hover {
+                                color: rgba($black, 1);
+                            }
+                
+                            &:hover>i {
+                                color: $active;
+                            }
+                        }
+                
+                        li.active {
+                            color: rgba($black, 1);
+                
+                            &>i {
+                                color: $active;
+                            }
+                        }
+                    }
+                }
+                #border {
+                    width: 1px;
+                    height: 75%;
+                    background: rgba($black, .2);
+                
+                    #line.one {
+                        width: 5px;
+                        height: 55px;
+                        background-color: $active;
+                        margin-left: -2px;
+                        margin-top: 25px;
+                        transition: all .4s ease-in-out;
+                    }
+                
+                    #line.two {
+                        width: 5px;
+                        height: 55px;
+                        background-color: $active;
+                        margin-left: -2px;
+                        margin-top: 90px;
+                        transition: all .4s ease-in-out;
+                    }
+                
+                    #line.three {
+                        width: 5px;
+                        height: 55px;
+                        background-color: $active;
+                        margin-left: -2px;
+                        margin-top: 155px;
+                        transition: all .4s ease-in-out;
+                    }
+                
+                    #line.four {
+                        width: 5px;
+                        height: 55px;
+                        background-color: $active;
+                        margin-left: -2px;
+                        margin-top: 215px;
+                        transition: all .4s ease-in-out;
+                    }
+                }
+                
+                #right-side {
+                    width: 75%;
+                    height: 75%;
+                    overflow: hidden;
+                
+                    #shoppingCart,
+                    #pay,
+                    #like,
+                    #question {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        position: absolute;
+                        margin-top: -300px;
+                        opacity: 0;
+                        transition: all .6s ease-in-out;
+                
+                        i {
+                            font-size: 80px;
+                        }
+                
+                        h1 {
+                            font-weight: 800;
+                            font-size: 35px;
+                            color: $black;
+                            padding: 40px;
+                        }
+                
+                        p {
+                            color: $black;
+                            padding: 0 30px;
+                            line-height: 1.2;
+                        }
+                    }
+                
+                    #shoppingCart.active,
+                    #pay.active,
+                    #like.active,
+                    #question.active {
+                        opacity: 1;
+                        margin-top: 15px;
+                        transition: all .6s ease-in-out;
+                    }
             }
         }
+    }
     }
 }

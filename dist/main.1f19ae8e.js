@@ -259,8 +259,66 @@ $(function () {
   $moreImg.hover(function () {
     $moreImg.toggleClass("active");
   }); //--------------------------------------
+  //-------amimation------
+
+  $(".first").on("click", function () {
+    $(".first").addClass("active");
+    $(".second").removeClass("active");
+    $(".third").removeClass("active");
+    $(".fourth").removeClass("active");
+    $("#line").addClass("one");
+    $("#line").removeClass("two");
+    $("#line").removeClass("three");
+    $("#line").removeClass("four");
+    $("#shoppingCart").addClass("active");
+    $("#pay").removeClass("active");
+    $("#like").removeClass("active");
+    $("#question").removeClass("active");
+  });
+  $(".second").on("click", function () {
+    $(".first").removeClass("active");
+    $(".second").addClass("active");
+    $(".third").removeClass("active");
+    $(".fourth").removeClass("active");
+    $("#line").removeClass("one");
+    $("#line").addClass("two");
+    $("#line").removeClass("three");
+    $("#line").removeClass("four");
+    $("#shoppingCart").removeClass("active");
+    $("#pay").addClass("active");
+    $("#like").removeClass("active");
+    $("#question").removeClass("active");
+  });
+  $(".third").on("click", function () {
+    $(".first").removeClass("active");
+    $(".second").removeClass("active");
+    $(".third").addClass("active");
+    $(".fourth").removeClass("active");
+    $("#line").removeClass("one");
+    $("#line").removeClass("two");
+    $("#line").addClass("three");
+    $("#line").removeClass("four");
+    $("#shoppingCart").removeClass("active");
+    $("#pay").removeClass("active");
+    $("#like").addClass("active");
+    $("#question").removeClass("active");
+  });
+  $(".fourth").on("click", function () {
+    $(".first").removeClass("active");
+    $(".second").removeClass("active");
+    $(".third").removeClass("active");
+    $(".fourth").addClass("active");
+    $("#line").removeClass("one");
+    $("#line").removeClass("two");
+    $("#line").removeClass("three");
+    $("#line").addClass("four");
+    $("#shoppingCart").removeClass("active");
+    $("#pay").removeClass("active");
+    $("#like").removeClass("active");
+    $("#question").addClass("active");
+  }); //-----------------
 });
-},{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{}],"../../AppData/Roaming/npm-cache/_npx/8744/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -288,7 +346,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58197" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56149" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -464,5 +522,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js","main.js"], null)
+},{}]},{},["../../AppData/Roaming/npm-cache/_npx/8744/node_modules/parcel/src/builtins/hmr-runtime.js","main.js"], null)
 //# sourceMappingURL=/main.1f19ae8e.js.map
