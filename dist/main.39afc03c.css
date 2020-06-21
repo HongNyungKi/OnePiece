@@ -283,10 +283,9 @@ body {
         font-size: 100px;
         letter-spacing: 5px; }
       body .web-inner .section-animation .animation_container {
-        height: 80vh;
         background: green;
-        width: 900px;
-        height: 400px;
+        width: 100%;
+        height: 70vh;
         position: absolute;
         top: 0;
         bottom: 0;
@@ -303,22 +302,27 @@ body {
           display: flex;
           align-items: center;
           justify-content: center; }
-          body .web-inner .section-animation .animation_container #left-side ul li {
-            padding: 15px 0;
-            line-height: 2;
-            cursor: pointer;
-            color: rgba(51, 51, 51, 0.5); }
-            body .web-inner .section-animation .animation_container #left-side ul li i {
-              font-size: 25px;
-              margin-right: 10px; }
-            body .web-inner .section-animation .animation_container #left-side ul li:hover {
-              color: #333333; }
-            body .web-inner .section-animation .animation_container #left-side ul li:hover > i {
-              color: #E74C3C; }
-          body .web-inner .section-animation .animation_container #left-side ul li.active {
-            color: #333333; }
-            body .web-inner .section-animation .animation_container #left-side ul li.active > i {
-              color: #E74C3C; }
+          body .web-inner .section-animation .animation_container #left-side ul {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin: 0 2vw; }
+            body .web-inner .section-animation .animation_container #left-side ul li {
+              display: flex;
+              align-items: center;
+              cursor: pointer; }
+              body .web-inner .section-animation .animation_container #left-side ul li img {
+                width: 25%;
+                margin-right: 2vw;
+                -webkit-filter: grayscale(100%);
+                opacity: 0.8; }
+              body .web-inner .section-animation .animation_container #left-side ul li p {
+                font-family: 'Nanum Gothic Coding', monospace;
+                font-weight: bold; }
+              body .web-inner .section-animation .animation_container #left-side ul li:hover img {
+                -webkit-filter: grayscale(0); }
         body .web-inner .section-animation .animation_container #border {
           width: 1px;
           height: 75%;

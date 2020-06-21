@@ -429,10 +429,9 @@ body {
             }
 
             .animation_container {
-                height: 80vh;
                 background: green;
-                width: 900px;
-                height: 400px;
+                width: 100%;
+                height: 70vh;
                 position: absolute;
                 top: 0;
                 bottom: 0;
@@ -443,48 +442,51 @@ body {
                 box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
                 display: flex;
                 align-items: center;
+
                 #left-side {
                     height: 70%;
                     width: 25%;
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                
+
                     ul {
+                        height: 100%;
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        margin: 0 2vw;
+
                         li {
-                            padding: 15px 0;
-                            line-height: 2;
+                            display: flex;
+                            align-items: center;
                             cursor: pointer;
-                            color: rgba($black, .5);
-                
-                            i {
-                                font-size: 25px;
-                                margin-right: 10px;
+
+                            img {
+                                width: 25%;
+                                margin-right: 2vw;
+                                -webkit-filter: grayscale(100%);
+                                opacity: 0.8;
                             }
-                
-                            &:hover {
-                                color: rgba($black, 1);
+
+                            p {
+                                font-family: 'Nanum Gothic Coding', monospace;
+                                font-weight: bold;
                             }
-                
-                            &:hover>i {
-                                color: $active;
-                            }
-                        }
-                
-                        li.active {
-                            color: rgba($black, 1);
-                
-                            &>i {
-                                color: $active;
+
+                            &:hover img {
+                                -webkit-filter: grayscale(0);
                             }
                         }
                     }
                 }
+
                 #border {
                     width: 1px;
                     height: 75%;
                     background: rgba($black, .2);
-                
+
                     #line.one {
                         width: 5px;
                         height: 55px;
@@ -493,7 +495,7 @@ body {
                         margin-top: 25px;
                         transition: all .4s ease-in-out;
                     }
-                
+
                     #line.two {
                         width: 5px;
                         height: 55px;
@@ -502,7 +504,7 @@ body {
                         margin-top: 90px;
                         transition: all .4s ease-in-out;
                     }
-                
+
                     #line.three {
                         width: 5px;
                         height: 55px;
@@ -511,7 +513,7 @@ body {
                         margin-top: 155px;
                         transition: all .4s ease-in-out;
                     }
-                
+
                     #line.four {
                         width: 5px;
                         height: 55px;
@@ -521,12 +523,12 @@ body {
                         transition: all .4s ease-in-out;
                     }
                 }
-                
+
                 #right-side {
                     width: 75%;
                     height: 75%;
                     overflow: hidden;
-                
+
                     #shoppingCart,
                     #pay,
                     #like,
@@ -539,25 +541,25 @@ body {
                         margin-top: -300px;
                         opacity: 0;
                         transition: all .6s ease-in-out;
-                
+
                         i {
                             font-size: 80px;
                         }
-                
+
                         h1 {
                             font-weight: 800;
                             font-size: 35px;
                             color: $black;
                             padding: 40px;
                         }
-                
+
                         p {
                             color: $black;
                             padding: 0 30px;
                             line-height: 1.2;
                         }
                     }
-                
+
                     #shoppingCart.active,
                     #pay.active,
                     #like.active,
@@ -566,8 +568,8 @@ body {
                         margin-top: 15px;
                         transition: all .6s ease-in-out;
                     }
+                }
             }
         }
-    }
     }
 }
