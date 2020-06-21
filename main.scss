@@ -59,7 +59,8 @@ body {
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
-                    height: inherit;
+                    width: 10vw;
+                    height: auto;
                 }
 
                 .user-menu ul {
@@ -432,12 +433,6 @@ body {
                 background: green;
                 width: 100%;
                 height: 70vh;
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                margin: auto;
                 background: $white;
                 box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
                 display: flex;
@@ -491,8 +486,8 @@ body {
                         width: 5px;
                         height: 55px;
                         background-color: $active;
-                        margin-left: -2px;
-                        margin-top: 25px;
+                        margin-left: -0.1vw;
+                        margin-top: 2.3vh;
                         transition: all .4s ease-in-out;
                     }
 
@@ -500,8 +495,8 @@ body {
                         width: 5px;
                         height: 55px;
                         background-color: $active;
-                        margin-left: -2px;
-                        margin-top: 90px;
+                        margin-left: -0.1vw;
+                        margin-top: 12.2vh;
                         transition: all .4s ease-in-out;
                     }
 
@@ -509,8 +504,8 @@ body {
                         width: 5px;
                         height: 55px;
                         background-color: $active;
-                        margin-left: -2px;
-                        margin-top: 155px;
+                        margin-left: -0.1vw;
+                        margin-top: 22.3vh;
                         transition: all .4s ease-in-out;
                     }
 
@@ -518,8 +513,17 @@ body {
                         width: 5px;
                         height: 55px;
                         background-color: $active;
-                        margin-left: -2px;
-                        margin-top: 215px;
+                        margin-left: -0.1vw;
+                        margin-top: 32.5vh;
+                        transition: all .4s ease-in-out;
+                    }
+
+                    #line.five {
+                        width: 5px;
+                        height: 55px;
+                        background-color: $active;
+                        margin-left: -0.1vw;
+                        margin-top: 43.1vh;
                         transition: all .4s ease-in-out;
                     }
                 }
@@ -527,46 +531,68 @@ body {
                 #right-side {
                     width: 75%;
                     height: 75%;
-                    overflow: hidden;
 
-                    #shoppingCart,
-                    #pay,
-                    #like,
-                    #question {
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        justify-content: center;
-                        position: absolute;
-                        margin-top: -300px;
+
+                    // overflow: hidden;
+
+                    #recent {
                         opacity: 0;
-                        transition: all .6s ease-in-out;
+                        width: 100%;
+                        height: 100%;
+                        position: relative;
 
-                        i {
-                            font-size: 80px;
+                        .video-container {
+                            position: absolute;
+                            width: 80vh;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            box-shadow:
+                                0 7.1px 9.9px -1px rgba(0, 0, 0, 0.215),
+                                0 57px 79px -1px rgba(0, 0, 0, 0.43);
+
+                            .video-ratio {
+                                width: 100%;
+                                padding-bottom: 56.25%;
+                                position: relative;
+
+                                iframe {
+                                    position: absolute;
+                                    left: 0;
+                                    top: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            }
                         }
 
-                        h1 {
-                            font-weight: 800;
-                            font-size: 35px;
-                            color: $black;
-                            padding: 40px;
-                        }
-
-                        p {
-                            color: $black;
-                            padding: 0 30px;
-                            line-height: 1.2;
+                        .character {
+                            position: absolute;
+                            bottom: -15vh;
+                            right: -50vh;
+                            opacity: 0;
+                            transition: all .6s ease-in-out;
                         }
                     }
 
-                    #shoppingCart.active,
-                    #pay.active,
-                    #like.active,
-                    #question.active {
+                    #recent.active,
+                    #previous.active {
                         opacity: 1;
-                        margin-top: 15px;
-                        transition: all .6s ease-in-out;
+
+                        .character {
+                            position: absolute;
+                            bottom: -15vh;
+                            right: -22vh;
+                            opacity: 1;
+                            transition: all .6s ease-in-out;
+                        }
+                    }
+
+                    #previous {
+                        width: 300px;
+                        height: 300px;
+                        background: red;
+                        opacity: 0;
                     }
                 }
             }
