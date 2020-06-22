@@ -162,6 +162,11 @@ $(function () {
         $("#previous").addClass("active");
         $("#recent").removeClass("active");
     })
+    $(".third").click(function () {
+        $("#pastAniPay").addClass("active");
+        $("#recent").removeClass("active");
+        $("#previous").removeClass("active");
+    })
     //-----------------
 
 
