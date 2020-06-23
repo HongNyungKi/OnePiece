@@ -23,12 +23,14 @@
                 <div class="menu-wrap">
                     <div class="main-menu">
                         <ul>
+                            <li class="on"><a href="#">home</a></li>
                             <li><a href="#">movie</a></li>
                             <li><a href="#">animation</a></li>
                             <li><a href="#">books</a></li>
                         </ul>
                     </div>
                     <img src="./source/원피스로고.png" class="logo">
+                    <img src="./source/logo2.png" class="logo2">
                     <div class="user-menu">
                         <ul>
                             <li><a href="#">장바구니</a></li>
@@ -109,23 +111,23 @@
             <div class="animation_container">
                 <div id="left-side">
                     <ul>
-                        <li class="first">
+                        <li id="first" class="active">
                             <img src="./source/logo.png">
                             <p>최신화 보기</p>
                         </li>
-                        <li class="second">
+                        <li id="second">
                             <img src="./source/로빈해적기.png">
                             <p>이전화 보기</p>
                         </li>
-                        <li class="third">
+                        <li id="third">
                             <img src="./source/조로해적기.png">
                             <p>이전화 구매하기</p>
                         </li>
-                        <li class="fourth">
+                        <li id="fourth">
                             <img src="./source/프랑키해적기.png">
                             <p>문의하기</p>
                         </li>
-                        <li class="five">
+                        <li id="five">
                             <img src="./source/로우 해적기.png">
                             <p>구매 보관함</p>
                         </li>
@@ -136,7 +138,7 @@
                     <div id="line" class="one"></div>
                 </div>
                 <div id="right-side">
-                    <div id="recent">
+                    <div id="recent" class="active">
                         <div class="video-container">
                             <div class="video-ratio">
                                 <iframe width="1729" height="741"
@@ -170,6 +172,10 @@
                 </div>
             </div>
         </section>
+        <section class="section-books">
+
+        </section>
+        <a href="#" class="go_top"><i class="fas fa-arrow-up"></i></a>
     </div>
     <script src="./main.js"></script>
 </body>

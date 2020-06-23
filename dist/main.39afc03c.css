@@ -7,7 +7,7 @@ body {
     text-decoration: none;
     color: black; }
   body .web-inner {
-    width: 1400px;
+    width: 75vw;
     height: 100%;
     margin: 0 auto; }
     body .web-inner .header-container {
@@ -16,7 +16,7 @@ body {
       z-index: 99;
       transition: all 0.25s;
       background: white;
-      width: 1400px;
+      width: 75vw;
       height: 100px; }
       body .web-inner .header-container .menu-wrap {
         display: flex;
@@ -34,9 +34,13 @@ body {
           font-size: 20px;
           letter-spacing: 2px; }
           body .web-inner .header-container .menu-wrap .main-menu ul li {
-            margin: 0 10px; }
+            margin: 0 10px;
+            padding: 10px 0; }
             body .web-inner .header-container .menu-wrap .main-menu ul li a {
               padding: 10px 10px; }
+          body .web-inner .header-container .menu-wrap .main-menu ul li.on {
+            border-bottom: 5px solid red;
+            border-radius: 45%; }
         body .web-inner .header-container .menu-wrap .logo {
           position: absolute;
           top: 50%;
@@ -44,6 +48,14 @@ body {
           transform: translate(-50%, -50%);
           width: 10vw;
           height: auto; }
+        body .web-inner .header-container .menu-wrap .logo2 {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 10vw;
+          height: auto;
+          display: none; }
         body .web-inner .header-container .menu-wrap .user-menu ul {
           height: 100%;
           display: flex;
@@ -64,7 +76,7 @@ body {
       z-index: 99;
       transition: all 0.25s;
       background: gray;
-      width: 1400px;
+      width: 75vw;
       height: 60px; }
       body .web-inner .header-container-clone .menu-wrap {
         display: flex;
@@ -82,10 +94,14 @@ body {
           font-size: 20px;
           letter-spacing: 2px; }
           body .web-inner .header-container-clone .menu-wrap .main-menu ul li {
-            margin: 0 10px; }
+            margin: 0 10px;
+            padding: 5px 0; }
             body .web-inner .header-container-clone .menu-wrap .main-menu ul li a {
               padding: 10px 10px; }
-        body .web-inner .header-container-clone .menu-wrap .logo {
+          body .web-inner .header-container-clone .menu-wrap .main-menu ul li.on {
+            border-bottom: 5px solid red;
+            border-radius: 45%; }
+        body .web-inner .header-container-clone .menu-wrap .logo2 {
           position: absolute;
           top: 50%;
           left: 50%;
@@ -110,19 +126,19 @@ body {
       margin-top: 100px; }
       body .web-inner .section-slider .slideShow {
         width: 100%;
-        height: 700px;
+        height: 80vh;
         overflow: hidden;
         position: relative;
         box-shadow: 2px 2px 5px #999; }
         body .web-inner .section-slider .slideShow .slideShow_slides {
           position: absolute;
-          width: 100%;
-          height: 100%; }
+          width: 100%; }
           body .web-inner .section-slider .slideShow .slideShow_slides a {
             position: absolute;
             width: inherit;
-            height: inherit;
-            cursor: crosshair; }
+            cursor: auto; }
+            body .web-inner .section-slider .slideShow .slideShow_slides a img {
+              width: 100%; }
         body .web-inner .section-slider .slideShow .slideShow_nav i {
           font-size: 50px;
           position: absolute;
@@ -173,7 +189,7 @@ body {
       body .web-inner .section-movie .movie_container {
         display: flex;
         width: 100%;
-        height: 80vh; }
+        height: 70vh; }
         body .web-inner .section-movie .movie_container .column1 {
           width: 100%;
           position: relative;
@@ -184,11 +200,11 @@ body {
             top: 42%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 50%;
+            width: 45%;
             height: auto;
             transition: 0.3s; }
             body .web-inner .section-movie .movie_container .column1 .image-wrap:hover {
-              width: 54%; }
+              width: 50%; }
             body .web-inner .section-movie .movie_container .column1 .image-wrap img {
               width: 100%;
               box-shadow: 0 0 10px gray; }
@@ -221,14 +237,14 @@ body {
                 top: 45%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                width: 55%;
+                width: 50%;
                 height: auto;
                 transition: 0.3s; }
                 body .web-inner .section-movie .movie_container .column2 .past-movie li .image-wrap img {
                   width: 100%;
                   box-shadow: 0 0 10px gray; }
                 body .web-inner .section-movie .movie_container .column2 .past-movie li .image-wrap:hover {
-                  width: 59%; }
+                  width: 55%; }
               body .web-inner .section-movie .movie_container .column2 .past-movie li .movie-desc {
                 position: absolute;
                 bottom: 5%;
@@ -251,11 +267,11 @@ body {
               top: 40%;
               left: 50%;
               transform: translate(-50%, -50%);
-              width: 35%;
+              width: 30%;
               height: auto;
               transition: 0.3s; }
               body .web-inner .section-movie .movie_container .column2 .more .image-wrap:hover {
-                width: 40%;
+                width: 35%;
                 background: #1F64A9; }
               body .web-inner .section-movie .movie_container .column2 .more .image-wrap img {
                 width: 100%; }
@@ -317,7 +333,11 @@ body {
                 font-family: 'Nanum Gothic Coding', monospace;
                 font-weight: bold; }
               body .web-inner .section-animation .animation_container #left-side ul li:hover img {
-                -webkit-filter: grayscale(0); }
+                -webkit-filter: grayscale(0);
+                opacity: 1; }
+            body .web-inner .section-animation .animation_container #left-side ul li.active img {
+              -webkit-filter: grayscale(0);
+              opacity: 1; }
         body .web-inner .section-animation .animation_container #border {
           width: 1px;
           height: 75%;
@@ -425,6 +445,20 @@ body {
               transition: all .6s ease-in-out; }
           body .web-inner .section-animation .animation_container #right-side #pastAniPay.active {
             opacity: 1; }
+    body .web-inner .go_top {
+      position: fixed;
+      left: 8vh;
+      bottom: 8vh;
+      width: 50px;
+      height: 50px;
+      background: gray;
+      text-align: center;
+      line-height: 50px;
+      color: white;
+      border-radius: 3px;
+      display: none; }
+      body .web-inner .go_top:hover {
+        color: black; }
 
 
 /*# sourceMappingURL=/main.39afc03c.css.map */

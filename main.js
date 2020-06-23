@@ -7,6 +7,7 @@ $(function () {
         $threshold = $header.offset().top + $header.outerHeight();
 
     $headerContainer.append($headerClone);
+    $headerContainer.find(".logo").remove();
     $headerContainer.appendTo("header");
 
 
@@ -154,20 +155,83 @@ $(function () {
     });
     //--------------------------------------
     //-------amimation------
-    $(".first").click(function () {
+    $("#first").click(function () {
+        $(this).addClass("active");
+        $(this).siblings().removeClass("active");
+
         $("#recent").addClass("active");
         $("#previous").removeClass("active");
+
+        $("#line").addClass("one");
+        $("#line").removeClass("two");
+        $("#line").removeClass("three");
+        $("#line").removeClass("four");
+
+
     });
-    $(".second").click(function () {
+    $("#second").click(function () {
+        $(this).addClass("active");
+        $(this).siblings().removeClass("active");
+
         $("#previous").addClass("active");
         $("#recent").removeClass("active");
+
+        $("#line").addClass("two");
+        $("#line").removeClass("one");
+        $("#line").removeClass("three");
+        $("#line").removeClass("four");
     })
-    $(".third").click(function () {
+    $("#third").click(function () {
+        $(this).addClass("active");
+        $(this).siblings().removeClass("active");
+
         $("#pastAniPay").addClass("active");
         $("#recent").removeClass("active");
         $("#previous").removeClass("active");
+
+        $("#line").addClass("three");
+        $("#line").removeClass("one");
+        $("#line").removeClass("two");
+        $("#line").removeClass("four");
     })
     //-----------------
+    var $menu = $(".main-menu ul li"),
+        $contents = $("section");
 
+    $menu.click(function (e) {
+        e.preventDefault();
 
+        var idx = $(this).index();
+        var section = $contents.eq(idx);
+        var sectionDistance = section.offset().top - 90;
+
+        $("html,body").stop().animate({
+            scrollTop: sectionDistance
+        })
+    })
+
+    $(window).scroll(function () {
+        $contents.each(function () {
+            if ($(this).offset().top <= $(window).scrollTop()) {
+                var idx = $(this).index();
+                $menu.removeClass("on");
+                $menu.eq(idx).addClass("on");
+            }
+        })
+
+    })
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() >= 300) {
+            $(".go_top").fadeIn();
+        } else {
+            $(".go_top").fadeOut();
+        }
+    })
+    $(".go_top").click(function (e) {
+        e.preventDefault();
+        $("html,body").stop().animate({
+            scrollTop: 0
+        }, 500)
+    })
 });
