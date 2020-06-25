@@ -234,4 +234,13 @@ $(function () {
             scrollTop: 0
         }, 500)
     })
+    //.............................................
+    var $books = $(".section-books"),
+        $slider = $books.find(".slider"),
+        $button = $books.find("button");
+    $ul = $books.find("ul");
+    $button.click(function () {
+        $slider.toggleClass("active");
+    });
+
 });

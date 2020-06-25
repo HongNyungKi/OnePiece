@@ -326,6 +326,14 @@ $(function () {
     $("html,body").stop().animate({
       scrollTop: 0
     }, 500);
+  }); //.............................................
+
+  var $books = $(".section-books"),
+      $slider = $books.find(".slider"),
+      $button = $books.find("button");
+  $ul = $books.find("ul");
+  $button.click(function () {
+    $slider.toggleClass("active");
   });
 });
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -356,7 +364,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50001" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61564" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
