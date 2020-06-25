@@ -243,4 +243,13 @@ $(function () {
         $slider.toggleClass("active");
     });
 
+    var $books = $(".section-books"),
+        $label = $books.find("label");
+
+    $label.hover(function () {
+        $(this).find("i").attr('class', 'fas fa-unlock unlock');
+    }, function () {
+        $(this).find("i").attr('class', 'fas fa-lock lock');
+    });
+
 });
