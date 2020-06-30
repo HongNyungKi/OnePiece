@@ -381,13 +381,48 @@ body {
           width: 75%;
           height: 75%;
           position: relative; }
-          body .web-inner .section-animation .animation_container #right-side #recent,
+          body .web-inner .section-animation .animation_container #right-side #recent {
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute; }
+            body .web-inner .section-animation .animation_container #right-side #recent .video-container {
+              position: absolute;
+              width: 80vh;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              box-shadow: 0 7.1px 9.9px -1px rgba(0, 0, 0, 0.215), 0 57px 79px -1px rgba(0, 0, 0, 0.43); }
+              body .web-inner .section-animation .animation_container #right-side #recent .video-container .video-ratio {
+                width: 100%;
+                padding-bottom: 56.25%;
+                position: relative; }
+                body .web-inner .section-animation .animation_container #right-side #recent .video-container .video-ratio iframe {
+                  position: absolute;
+                  left: 0;
+                  top: 0;
+                  width: 100%;
+                  height: 100%; }
+            body .web-inner .section-animation .animation_container #right-side #recent .character {
+              position: absolute;
+              bottom: -20%;
+              right: 10%;
+              opacity: 0;
+              transition: all .6s ease-in-out; }
+              body .web-inner .section-animation .animation_container #right-side #recent .character img {
+                height: 35vh; }
+          body .web-inner .section-animation .animation_container #right-side #recent.active {
+            opacity: 1; }
+            body .web-inner .section-animation .animation_container #right-side #recent.active .character {
+              position: absolute;
+              bottom: -20%;
+              right: 0;
+              opacity: 1; }
           body .web-inner .section-animation .animation_container #right-side #previous {
             opacity: 0;
             width: 100%;
             height: 100%;
             position: absolute; }
-            body .web-inner .section-animation .animation_container #right-side #recent .video-container,
             body .web-inner .section-animation .animation_container #right-side #previous .video-container {
               position: absolute;
               width: 80vh;
@@ -395,25 +430,27 @@ body {
               left: 50%;
               transform: translate(-50%, -50%);
               box-shadow: 0 7.1px 9.9px -1px rgba(0, 0, 0, 0.215), 0 57px 79px -1px rgba(0, 0, 0, 0.43); }
-              body .web-inner .section-animation .animation_container #right-side #recent .video-container .video-ratio,
               body .web-inner .section-animation .animation_container #right-side #previous .video-container .video-ratio {
                 width: 100%;
                 padding-bottom: 56.25%;
                 position: relative; }
-                body .web-inner .section-animation .animation_container #right-side #recent .video-container .video-ratio iframe,
                 body .web-inner .section-animation .animation_container #right-side #previous .video-container .video-ratio iframe {
                   position: absolute;
                   left: 0;
                   top: 0;
                   width: 100%;
                   height: 100%; }
-            body .web-inner .section-animation .animation_container #right-side #recent .character,
             body .web-inner .section-animation .animation_container #right-side #previous .character {
               position: absolute;
-              bottom: -15vh;
-              right: -30vh;
-              opacity: 0;
+              top: 0;
+              right: 0;
               transition: all .6s ease-in-out; }
+          body .web-inner .section-animation .animation_container #right-side #previous.active {
+            opacity: 1; }
+            body .web-inner .section-animation .animation_container #right-side #previous.active .character {
+              position: absolute;
+              bottom: 0;
+              left: 0; }
           body .web-inner .section-animation .animation_container #right-side #pastAniPay {
             opacity: 0;
             width: 100%;
@@ -427,14 +464,6 @@ body {
               left: 50%;
               transform: translate(-50%, -50%);
               box-shadow: 0 7.1px 9.9px -1px rgba(0, 0, 0, 0.215), 0 57px 79px -1px rgba(0, 0, 0, 0.43); }
-          body .web-inner .section-animation .animation_container #right-side #recent.active {
-            opacity: 1; }
-            body .web-inner .section-animation .animation_container #right-side #recent.active .character {
-              position: absolute;
-              bottom: -15vh;
-              right: -22vh;
-              opacity: 1;
-              transition: all .6s ease-in-out; }
           body .web-inner .section-animation .animation_container #right-side #previous.active {
             opacity: 1; }
             body .web-inner .section-animation .animation_container #right-side #previous.active .character {
